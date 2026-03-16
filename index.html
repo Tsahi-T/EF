@@ -86,10 +86,10 @@
     .rphoto { position:relative; z-index:1; width:100%; height:100%; border-radius:50%; overflow:hidden; border:3px solid var(--bg); }
     .rphoto img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 
-    .eyebrow { font-size:.64rem; letter-spacing:5px; text-transform:uppercase; color:var(--crim2); font-weight:300; }
-    h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.55rem,5.5vw,2.4rem); font-weight:700; line-height:1.1; }
+    .eyebrow { font-size:.78rem; letter-spacing:5px; text-transform:uppercase; color:var(--crim2); font-weight:300; }
+    h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.85rem,6.5vw,2.4rem); font-weight:700; line-height:1.1; }
     h1 em { color:var(--crim2); font-style:italic; }
-    .tagline { color:var(--dim); font-size:clamp(.76rem,2.5vw,.9rem); font-style:italic; font-weight:300; }
+    .tagline { color:var(--dim); font-size:clamp(.92rem,3vw,1rem); font-style:italic; font-weight:300; }
 
     /* ── wheel ── */
     .wsec { display:flex; flex-direction:column; align-items:center; gap:clamp(16px,4vw,22px); width:100%; }
@@ -121,7 +121,7 @@
     .sbtn {
       display:inline-flex; align-items:center; gap:8px;
       padding: clamp(11px,3vw,14px) clamp(32px,8vw,48px);
-      font-family:'Raleway',sans-serif; font-size:clamp(.84rem,2.8vw,1rem);
+      font-family:'Raleway',sans-serif; font-size:clamp(.98rem,3.5vw,1.1rem);
       font-weight:600; letter-spacing:3px; text-transform:uppercase;
       color:var(--text); background:transparent; border:1px solid var(--crim);
       cursor:pointer; position:relative; overflow:hidden;
@@ -148,12 +148,12 @@
     @keyframes revCard { from{opacity:0;transform:translateY(18px) scale(.97)} to{opacity:1;transform:none} }
     #result.show { display:block; }
 
-    .reye { font-size:.63rem; letter-spacing:5px; text-transform:uppercase; color:var(--crim2); margin-bottom:8px; }
-    #rtitle { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.75rem,6vw,2.5rem);
+    .reye { font-size:.8rem; letter-spacing:5px; text-transform:uppercase; color:var(--crim2); margin-bottom:8px; }
+    #rtitle { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2rem,7vw,2.5rem);
       font-weight:700; line-height:1.05; margin-bottom:12px; }
     .rdiv { width:46px; height:1px; margin:0 auto 12px;
       background:linear-gradient(to right,transparent,var(--crim),transparent); }
-    #rdesc { color:var(--dim); font-size:clamp(.82rem,2.5vw,.93rem); font-style:italic;
+    #rdesc { color:var(--dim); font-size:clamp(.95rem,3vw,1.05rem); font-style:italic;
       font-weight:300; line-height:1.65; margin-bottom:20px; }
 
     .pframe { display:inline-block; padding:8px; border:1px solid rgba(139,26,42,.22); background:rgba(0,0,0,.3); }
@@ -162,7 +162,7 @@
 
     /* ── mini games ── */
     .msec { width:100%; display:flex; flex-direction:column; gap:clamp(10px,3vw,14px); }
-    .mtitle { text-align:center; font-size:.62rem; letter-spacing:4px; text-transform:uppercase; color:var(--dim); }
+    .mtitle { text-align:center; font-size:.76rem; letter-spacing:4px; text-transform:uppercase; color:var(--dim); }
     .mrow { display:flex; gap:clamp(10px,3vw,14px); width:100%; }
 
     /* flip card */
@@ -180,15 +180,15 @@
     .fc:hover .fc-f { border-color:rgba(139,26,42,.6); background:rgba(139,26,42,.06); }
     .fc-b { transform:rotateY(180deg); border-color:rgba(184,48,80,.4); background:rgba(139,26,42,.09); }
 
-    .fc-icon  { font-size:clamp(1.1rem,3.5vw,1.4rem); }
-    .fc-label { font-size:clamp(.6rem,1.8vw,.7rem); letter-spacing:2px; text-transform:uppercase; color:var(--dim); }
-    .fc-hint  { font-size:.54rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--crim); opacity:.6; }
-    .fc-res   { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1rem,3.5vw,1.25rem);
+    .fc-icon  { font-size:clamp(1.3rem,4.5vw,1.6rem); }
+    .fc-label { font-size:clamp(.74rem,2.8vw,.86rem); letter-spacing:2px; text-transform:uppercase; color:var(--dim); }
+    .fc-hint  { font-size:.68rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--crim); opacity:.6; }
+    .fc-res   { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.2rem,4.5vw,1.4rem);
       font-weight:700; color:var(--text); text-align:center; line-height:1.2; }
-    .fc-sub   { font-size:.55rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--dim); opacity:.7; }
+    .fc-sub   { font-size:.68rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--dim); opacity:.7; }
 
     /* footer */
-    .foot { color:var(--dim); font-size:.64rem; letter-spacing:1.5px; text-align:center; opacity:.5; }
+    .foot { color:var(--dim); font-size:.78rem; letter-spacing:1.5px; text-align:center; opacity:.5; }
   </style>
 </head>
 <body>
@@ -353,7 +353,7 @@ function drawWheel(rot) {
     // label
     ctx.save();
     ctx.translate(cx, cy); ctx.rotate(m); ctx.textAlign = 'right';
-    const fs = Math.max(9, canvas.width * .026);
+    const fs = Math.max(11, canvas.width * .031);
     ctx.font = `600 ${fs}px "Segoe UI",Arial,sans-serif`;
     ctx.fillStyle = '#D8C5C0';
     ctx.shadowColor = 'rgba(0,0,0,1)'; ctx.shadowBlur = 8;
